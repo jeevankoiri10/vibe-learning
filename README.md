@@ -20,6 +20,10 @@ six parts:
 5. **Learn it deeply** — a first-party documentation link
 6. **In your code** — the actual changed lines, commented, with the file path
 
+Here's one keyword section from a real lesson:
+
+![A rendered lesson section explaining CSS Grid, with a docs definition, first-principles take, example, docs link, and the actual changed code](images/vibe-learning-lesson.png)
+
 You pick your **level** (beginner / intermediate / advanced) and **depth**
 (brief / medium / deep) once per project; both are remembered. Trivial edits
 (renames, formatting) don't spawn lessons — only changes with something to learn.
@@ -109,6 +113,6 @@ MIT — see [LICENSE](LICENSE).
 
 ## Follow along
 
-[![Follow on X](https://img.shields.io/badge/Follow%20on-X-000000?logo=x&logoColor=white&style=for-the-badge)](https://twitter.com/koiri_jeevan/status/2059994698346029091)
+[![Follow on X](https://img.shields.io/badge/Follow%20on-X-000000?logo=x&logoColor=white&style=for-the-badge)](https://x.com/koiri_jeevan/status/2059995901100511614?s=20)
 
-> 📢 Read the announcement post on X: [@koiri_jeevan](https://twitter.com/koiri_jeevan/status/2059994698346029091)
+> 📢 Read the announcement post on X: [@koiri_jeevan](https://x.com/koiri_jeevan/status/2059995901100511614?s=20)
