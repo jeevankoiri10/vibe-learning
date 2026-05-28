@@ -100,3 +100,11 @@ plugins from sources you don't trust.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+## Follow along
+
+[![Follow on X](https://img.shields.io/badge/Follow%20on-X-000000?logo=x&logoColor=white&style=for-the-badge)](https://twitter.com/koiri_jeevan/status/2059994698346029091)
+
+> 📢 Read the announcement post on X: [@koiri_jeevan](https://twitter.com/koiri_jeevan/status/2059994698346029091)
