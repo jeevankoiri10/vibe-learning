@@ -41,6 +41,27 @@ In Claude Code:
 
 (You can also browse it: run `/plugin`, open the **Discover** tab.)
 
+### Already added it before? Refresh first
+
+Claude Code caches a clone of the marketplace, so if you added it previously you
+must pull the latest manifest before installing — otherwise you may see
+`Failed to install: Source path does not exist`:
+
+```shell
+# Re-pull the marketplace, then reinstall
+/plugin marketplace update vibe-learning
+/plugin install vibe-learning@vibe-learning
+/reload-plugins
+```
+
+If the error persists, the cached clone is stale. Remove and re-add it:
+
+```shell
+/plugin marketplace remove vibe-learning
+/plugin marketplace add jeevankoiri10/vibe-learning
+/plugin install vibe-learning@vibe-learning
+```
+
 ## Use it
 
 Start a coding session and say something like:
