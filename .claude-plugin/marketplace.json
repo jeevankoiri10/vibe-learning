@@ -6,13 +6,12 @@
   },
   "metadata": {
     "description": "Learn software engineering while you vibe code.",
-    "version": "1.0.0",
-    "pluginRoot": "./plugins"
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "vibe-learning",
-      "source": "./vibe-learning",
+      "source": "./plugins/vibe-learning",
       "description": "Built for Claude Code: after each meaningful code change, capture a lesson from the git diff. Each software-engineering keyword gets a docs-based explanation, a first-principles explanation, a real-world example with a commented sample, a docs link, and the actual changed code with its file path. Lessons accumulate as numbered, topic-named files in a vibe-learning/ folder.",
       "version": "1.0.0",
       "category": "learning",
