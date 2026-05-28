@@ -24,6 +24,10 @@ You pick your **level** (beginner / intermediate / advanced) and **depth**
 (brief / medium / deep) once per project; both are remembered. Trivial edits
 (renames, formatting) don't spawn lessons — only changes with something to learn.
 
+Lessons land right inside your project as you build:
+
+![A vibe-learning/ folder with generated lesson notes alongside the project files](images/vibe-learning-example.png)
+
 ## Install
 
 In Claude Code:
