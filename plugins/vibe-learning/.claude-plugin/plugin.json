@@ -1,12 +1,12 @@
 {
   "name": "vibe-learning",
   "version": "1.0.0",
-  "description": "Turn vibe coding into active learning. After each meaningful change, Claude Code captures a keyword-by-keyword lesson from the git diff into a vibe-learning/ folder.",
+  "description": "Learn software engineering while you vibe code.",
   "author": {
-    "name": "YOUR NAME",
-    "url": "https://github.com/YOUR_GITHUB_USERNAME"
+    "name": "Jeevan Koiri",
+    "url": "https://github.com/jeevankoiri10"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/vibe-learning",
+  "homepage": "https://github.com/jeevankoiri10/vibe-learning",
   "license": "MIT",
   "keywords": ["learning", "education", "skills", "documentation", "teaching"]
 }

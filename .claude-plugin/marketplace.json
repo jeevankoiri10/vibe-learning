@@ -1,11 +1,11 @@
 {
   "name": "vibe-learning",
   "owner": {
-    "name": "YOUR NAME",
-    "url": "https://github.com/YOUR_GITHUB_USERNAME"
+    "name": "Jeevan Koiri",
+    "url": "https://github.com/jeevankoiri10"
   },
   "metadata": {
-    "description": "Skills that turn vibe coding into active, durable learning.",
+    "description": "Learn software engineering while you vibe code.",
     "version": "1.0.0",
     "pluginRoot": "./plugins"
   },
