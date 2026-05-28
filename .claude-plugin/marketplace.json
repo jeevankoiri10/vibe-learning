@@ -1,0 +1,22 @@
+{
+  "name": "vibe-learning",
+  "owner": {
+    "name": "YOUR NAME",
+    "url": "https://github.com/YOUR_GITHUB_USERNAME"
+  },
+  "metadata": {
+    "description": "Skills that turn vibe coding into active, durable learning.",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "vibe-learning",
+      "source": "./vibe-learning",
+      "description": "Built for Claude Code: after each meaningful code change, capture a lesson from the git diff. Each software-engineering keyword gets a docs-based explanation, a first-principles explanation, a real-world example with a commented sample, a docs link, and the actual changed code with its file path. Lessons accumulate as numbered, topic-named files in a vibe-learning/ folder.",
+      "version": "1.0.0",
+      "category": "learning",
+      "tags": ["learning", "education", "documentation", "onboarding", "teaching"]
+    }
+  ]
+}
