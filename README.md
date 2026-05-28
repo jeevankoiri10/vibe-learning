@@ -1,6 +1,6 @@
-# Vibe Learning — a Claude Code marketplace
+# Vibe Learning : Learn software engineering while vibe coding 
 
-Learn development *while* you vibe code. This marketplace ships one plugin,
+Learn software engineering *while* you vibe code. This marketplace ships one plugin,
 **`vibe-learning`**, that turns Claude Code into a tutor riding along with your
 coding: after each meaningful change it reads the `git diff` and writes a lesson
 into a `vibe-learning/` folder in your project, building a personal curriculum
@@ -17,7 +17,7 @@ six parts:
 2. **What it is (docs)** — the accurate definition, grounded in official docs
 3. **First principles** — the same idea stripped to its essence, fewest words
 4. **Real-world example** — an analogy plus a small commented sample
-5. **Learn it deeply** — a first-party docs link
+5. **Learn it deeply** — a first-party documentation link
 6. **In your code** — the actual changed lines, commented, with the file path
 
 You pick your **level** (beginner / intermediate / advanced) and **depth**
@@ -30,7 +30,7 @@ In Claude Code:
 
 ```shell
 # 1. Add this marketplace
-/plugin marketplace add YOUR_GITHUB_USERNAME/vibe-learning
+/plugin marketplace add jeevankoiri10/vibe-learning
 
 # 2. Install the plugin
 /plugin install vibe-learning@vibe-learning
