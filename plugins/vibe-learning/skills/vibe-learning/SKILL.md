@@ -1,11 +1,11 @@
 ---
 name: vibe-learning
-description: Turn vibe coding into active learning, built for Claude Code. When the user wants to understand the code being written for them — not just receive it — pause after each meaningful code change and capture a lesson. Inspect the git diff, identify the software-engineering keywords it demonstrates, and write a note giving each keyword its own section — a docs-based explanation, a first-principles explanation, a real-world example with a commented sample, a docs link, and the actual changed code with its file path. Notes are saved as numbered, topic-named files in a vibe-learning/ folder so a personal curriculum builds up across the project. Use whenever the user says they want to learn while coding, asks Claude to explain changes as it makes them, mentions "vibe-learning" / "teach me as you go" / "/vibe-learning", or starts a coding session where understanding matters as much as shipping. Once invoked, stay in this teaching mode for the rest of the session.
+description: Turn vibe coding into active learning, built for Claude Code. When the user wants to understand the code being written for them — not just receive it — first complete every code change the user's prompt asks for, then capture the lessons. Inspect the git diff, identify the software-engineering keywords it demonstrates, and write a note giving each keyword its own section — a docs-based explanation, a first-principles explanation, a real-world example with a commented sample, a docs link, and the actual changed code with its file path. Notes are saved as numbered, topic-named files in a vibe-learning/ folder so a personal curriculum builds up across the project. Use whenever the user says they want to learn while coding, asks Claude to explain changes as it makes them, mentions "vibe-learning" / "teach me as you go" / "/vibe-learning", or starts a coding session where understanding matters as much as shipping. Once invoked, stay in this teaching mode for the rest of the session.
 ---
 
 # Vibe Learning
 
-A teaching companion that rides along while the user vibe codes. The user keeps prompting for features and fixes as normal; after Claude makes the changes, it also pauses to teach the concept behind them and records the lesson as a durable note.
+A teaching companion that rides along while the user vibe codes. The user keeps prompting for features and fixes as normal; Claude finishes *all* the changes that prompt asks for first, and only then pauses to teach the concepts behind them and record the lessons as durable notes.
 
 ## The point of this skill
 
@@ -37,13 +37,15 @@ The user can say things like *"switch to beginner explanations"* or *"go deeper 
 
 ## The teaching loop
 
-After each round of code changes you make in response to a user prompt, run this loop:
+**Finish the whole prompt first.** When the user gives you a prompt, make *all* the code changes it calls for — every file, every edit, end to end — before you teach anything. Don't interrupt the work to write a lesson after the first meaningful change. Only once the prompt is fully satisfied do you run this loop, capturing everything that changed across the whole prompt in one pass (one lesson if it's a single topic, or several notes if the work spanned distinct topics).
+
+Then run this loop:
 
 ### 1. Get the diff
 
-This skill is built for Claude Code, where you're editing the user's real repository, so lean on git to see exactly what changed.
-- Run `git diff` for unstaged work, `git diff --staged` for staged, or `git diff HEAD~1` to capture the change you just made. Use the precise hunks — teach from the real change, not from your memory of your intentions.
-- If the project isn't a git repo (or you're running outside Claude Code), fall back to the concrete set of edits you just made: the specific lines and files you added or changed.
+This skill is built for Claude Code, where you're editing the user's real repository, so lean on git to see exactly what changed. Capture the *full* set of changes the prompt produced, not just the last edit.
+- Run `git diff` for unstaged work, `git diff --staged` for staged, or `git diff HEAD~1` to capture the changes you just made. Use the precise hunks — teach from the real change, not from your memory of your intentions.
+- If the project isn't a git repo (or you're running outside Claude Code), fall back to the concrete set of edits you made across the whole prompt: every line and file you added or changed.
 
 Always note the **file path(s)** involved. Every lesson — and even a change you decide not to teach — must tell the user which file the code lives in, so they can open it and see the keyword in its real context.
 
@@ -159,7 +161,7 @@ anchored to real code from this codebase._
 
 ## Staying in mode
 
-Once invoked, treat teaching as an ongoing mode for the rest of the session: after every meaningful change, run the loop without being asked again. The user prompts for code as normal — they shouldn't have to re-request the lesson each time. Useful things the user might say, and how to respond:
+Once invoked, treat teaching as an ongoing mode for the rest of the session: after you've fully completed each prompt, run the loop without being asked again. The user prompts for code as normal — they shouldn't have to re-request the lesson each time, and they shouldn't have their feature work interrupted mid-prompt to be taught. Finish the prompt, then teach. Useful things the user might say, and how to respond:
 - *"pause vibe learning"* / *"just code for now"* → stop appending lessons until they re-enable it (still code normally).
 - *"resume"* → turn the loop back on.
 - *"change vibe settings"* / *"go deeper"* / *"explain like I'm a beginner"* → update `README.md` and continue.
